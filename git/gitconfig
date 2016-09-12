@@ -1,0 +1,30 @@
+[user]
+	name = David Jegat
+	email = david.jegat@knplabs.com
+[color]
+	ui = true
+	status = always
+[color "status"]
+    changed=yellow
+[core]
+    excludesfile = ~/.gitignore
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    all = add -A
+    amend = commit --amend
+    aci = !git add -A && git commit -m
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(bold blue)<%an>%Creset'--abbrev-commit --date=relative
+[merge]
+    tool = vimdiff
+[url "git@github.com:"]
+    insteadOf = gh:
+[push]
+    default = current
+[pull]
+    default = current
+[http]

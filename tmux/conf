@@ -1,0 +1,55 @@
+set-option -g default-terminal screen-256color
+set-option -g default-shell /bin/zsh
+
+# rebind default keys
+set -g prefix M-a
+unbind C-b
+bind M-a send-prefix
+
+# split window
+bind v split-window -h
+bind s split-window -v
+
+# hjkl pane traversal
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# swap window to the beginning
+bind L swap-window -t +1
+bind H swap-window -t -1
+
+# resize pane
+bind L resize-pane -R 10
+bind K resize-pane -U 10
+bind J resize-pane -D 10
+bind H resize-pane -L 10
+
+# reload tmux conf
+bind-key r source-file ~/.tmux.conf \; display "Config reloaded"
+
+set -g status-fg colour250
+set -g status-bg default
+
+# left side of status bar
+ set -g status-left-length 0
+
+# empty right status
+set -g status-right-length 0
+
+# status bar options
+set-option -g status-justify left         # alignment of windows
+set -g window-status-format '#[fg=colour247] #W'         # Inactive windows in status bar
+set -g window-status-current-format '#[fg=colour255,bold] #W'
+
+# message bar
+set -g message-fg colour250
+set -g message-bg colour233
+set -g message-attr bold
+set -g pane-border-fg colour236
+set -g pane-active-border-fg colour233
+
+# tmuxinator fix
+set -g base-index 1
+set -g pane-base-index 1

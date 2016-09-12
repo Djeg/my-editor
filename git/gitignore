@@ -1,0 +1,8 @@
+tags
+vendor.tags
+Guardfile
+sample/
+test.*
+*.orig
+*.tags
+.tagsgen.json

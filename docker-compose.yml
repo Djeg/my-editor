@@ -1,0 +1,6 @@
+version: '2'
+services:
+  editor:
+    build: .
+    volumes:
+     - '${PROJECT_FOLDER}:/project'
