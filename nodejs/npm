@@ -1,0 +1,7 @@
+#!/bin/bash
+
+VERSION=`n --latest`
+BIN_PATH=`n bin $VERSION`
+NPM_PATH="${BIN_PATH/\/bin\/node/\/lib\/node_modules\/npm\/cli.js}"
+
+$NPM_PATH $*

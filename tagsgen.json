@@ -1,0 +1,66 @@
+{
+    "php-source": {
+        "path": "src",
+        "extension": "php",
+        "file": "php-src.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "php-vendor": {
+        "path": "vendor",
+        "extension": "php",
+        "file": "php-vendor.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "js-lib": {
+        "path": "lib",
+        "extension": "js",
+        "file": "js-lib.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "js-modules": {
+        "path": "lib",
+        "extension": "js",
+        "file": "js-modules.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "js-jspm": {
+        "path": "jspm_packages",
+        "extension": "js",
+        "file": "js-jspm.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "ts-lib": {
+        "path": "lib",
+        "extension": "ts",
+        "file": "ts-lib.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "ts-typings": {
+        "path": "typings",
+        "extension": "ts",
+        "file": "ts-typings.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    },
+    "ts-modules": {
+        "path": "node_modules",
+        "extension": "ts",
+        "file": "ts-modules.tags",
+        "args": [
+            "--tag-relative"
+        ]
+    }
+}

@@ -4,3 +4,4 @@ services:
     build: .
     volumes:
      - '${PROJECT_FOLDER}:/project'
+     - '${SSH_FOLDER}:/root/.ssh'
