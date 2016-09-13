@@ -43,6 +43,8 @@ RUN npm install -g tagsgen
 COPY ./ctags /root/.ctags
 COPY ./tagsgen.json /root/.tagsgen.json
 
+# Setup php
+
 # Install vim bundles
 RUN cd /root && vim +BundleInstall +qall
 
