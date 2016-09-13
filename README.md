@@ -20,7 +20,7 @@ on docker.
 5. Export your ssh folder variable `export SSH=/home/my-user/.ssh`
 4. Install the font located under `font` and configure it for your terminal.
 3. Run `docker-compose up` (this could take a while ...).
-6. Finally run `docker-compose run editor tmux`
+6. Finally run `docker-compose run editor`
 
 All your project should be shared and located under `/project`.
 

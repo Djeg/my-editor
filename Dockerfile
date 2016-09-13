@@ -6,7 +6,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update
-RUN apt-get install -y vim vim-gtk tmux git nodejs npm exuberant-ctags xclip curl silversearcher-ag zsh
+RUN apt-get install -y vim vim-gtk tmux git nodejs npm exuberant-ctags xclip curl silversearcher-ag zsh tree
 
 ENV LANG en_US.UTF-8
 ENV TERM=screen-256color
