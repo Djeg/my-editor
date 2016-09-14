@@ -1,12 +1,17 @@
 FROM ubuntu:16.04
 
+MAINTAINER <david.jegat@gmail.com>
+
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update
-RUN apt-get install -y vim vim-gtk tmux git nodejs npm exuberant-ctags xclip curl silversearcher-ag zsh tree
+RUN apt-get install -y vim vim-gtk tmux git nodejs npm exuberant-ctags xclip \
+    curl silversearcher-ag zsh tree php7.0 php7.0-curl php7.0-mysql php7.0-sqlite3 \
+    php7.0-intl php7.0-json php7.0-soap php7.0-xml php7.0-xml php7.0-pgsql mysql-client \
+    sqlite3
 
 ENV LANG en_US.UTF-8
 ENV TERM=screen-256color
@@ -42,8 +47,6 @@ RUN ln -s /root/nodejs/npm /root/.bin/npm
 RUN npm install -g tagsgen
 COPY ./ctags /root/.ctags
 COPY ./tagsgen.json /root/.tagsgen.json
-
-# Setup php
 
 # Install vim bundles
 RUN cd /root && vim +BundleInstall +qall

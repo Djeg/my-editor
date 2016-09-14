@@ -1,19 +1,26 @@
 version: '2'
 services:
+  mysql:
+    image: "mysql:5.7"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:9010"
   editor:
     build: .
     volumes:
-     - '${PROJECT_FOLDER}:/project'
-     - '${SSH_FOLDER}:/root/.ssh'
+      - '${PROJECT_FOLDER}:/project'
+      - '${SSH_FOLDER}:/root/.ssh'
     ports:
-     - "9000:9000"
-     - "9001:9001"
-     - "9002:9002"
-     - "9003:9003"
-     - "9004:9004"
-     - "9005:9005"
-     - "9006:9006"
-     - "9007:9007"
-     - "9008:9008"
-     - "9009:9009"
-    user: "1000"
+      - "9000:9000"
+      - "9001:9001"
+      - "9002:9002"
+      - "9003:9003"
+      - "9004:9004"
+      - "9005:9005"
+      - "9006:9006"
+      - "9007:9007"
+      - "9008:9008"
+      - "9009:9009"
+    links:
+      - "mysql:mysql"
